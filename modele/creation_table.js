@@ -16,13 +16,14 @@ const utilisateur = sequelize.define('utilisateur', {
     },
     nom: {
         type: Sequelize.STRING,
-        allowNull: false
+        unique: true
     },
     prenom: {
         type: DataTypes.STRING
     },
     email: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        unique:true
     }
     },{
         define: {
